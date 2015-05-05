@@ -14,6 +14,9 @@
 		F74D754D1AF90700002F23B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F74D754C1AF90700002F23B0 /* Images.xcassets */; };
 		F74D75501AF90700002F23B0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F74D754E1AF90700002F23B0 /* LaunchScreen.xib */; };
 		F74D755C1AF90700002F23B0 /* lastfyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F74D755B1AF90700002F23B0 /* lastfyTests.m */; };
+		F74D75681AF90828002F23B0 /* LastfmLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F74D75671AF90828002F23B0 /* LastfmLoginViewController.m */; };
+		F74D756B1AF90C5B002F23B0 /* SpotifyLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F74D756A1AF90C5B002F23B0 /* SpotifyLoginViewController.m */; };
+		F74D756D1AF90C84002F23B0 /* Spotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F74D756C1AF90C84002F23B0 /* Spotify.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,11 @@
 		F74D75551AF90700002F23B0 /* lastfyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lastfyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F74D755A1AF90700002F23B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F74D755B1AF90700002F23B0 /* lastfyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = lastfyTests.m; sourceTree = "<group>"; };
+		F74D75661AF90828002F23B0 /* LastfmLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LastfmLoginViewController.h; path = ViewControllers/LastfmLoginViewController.h; sourceTree = "<group>"; };
+		F74D75671AF90828002F23B0 /* LastfmLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LastfmLoginViewController.m; path = ViewControllers/LastfmLoginViewController.m; sourceTree = "<group>"; };
+		F74D75691AF90C5B002F23B0 /* SpotifyLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpotifyLoginViewController.h; path = ViewControllers/SpotifyLoginViewController.h; sourceTree = "<group>"; };
+		F74D756A1AF90C5B002F23B0 /* SpotifyLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpotifyLoginViewController.m; path = ViewControllers/SpotifyLoginViewController.m; sourceTree = "<group>"; };
+		F74D756C1AF90C84002F23B0 /* Spotify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Spotify.framework; path = "../../Downloads/ios-sdk-master/Spotify.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F74D756D1AF90C84002F23B0 /* Spotify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +72,7 @@
 		F74D75331AF90700002F23B0 = {
 			isa = PBXGroup;
 			children = (
+				F74D756C1AF90C84002F23B0 /* Spotify.framework */,
 				F74D753E1AF90700002F23B0 /* lastfy */,
 				F74D75581AF90700002F23B0 /* lastfyTests */,
 				F74D753D1AF90700002F23B0 /* Products */,
@@ -81,10 +91,9 @@
 		F74D753E1AF90700002F23B0 /* lastfy */ = {
 			isa = PBXGroup;
 			children = (
+				F74D75651AF9078F002F23B0 /* Controllers */,
 				F74D75431AF90700002F23B0 /* AppDelegate.h */,
 				F74D75441AF90700002F23B0 /* AppDelegate.m */,
-				F74D75461AF90700002F23B0 /* ViewController.h */,
-				F74D75471AF90700002F23B0 /* ViewController.m */,
 				F74D75491AF90700002F23B0 /* Main.storyboard */,
 				F74D754C1AF90700002F23B0 /* Images.xcassets */,
 				F74D754E1AF90700002F23B0 /* LaunchScreen.xib */,
@@ -117,6 +126,19 @@
 				F74D755A1AF90700002F23B0 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F74D75651AF9078F002F23B0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F74D75461AF90700002F23B0 /* ViewController.h */,
+				F74D75471AF90700002F23B0 /* ViewController.m */,
+				F74D75661AF90828002F23B0 /* LastfmLoginViewController.h */,
+				F74D75671AF90828002F23B0 /* LastfmLoginViewController.m */,
+				F74D75691AF90C5B002F23B0 /* SpotifyLoginViewController.h */,
+				F74D756A1AF90C5B002F23B0 /* SpotifyLoginViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +242,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F74D75481AF90700002F23B0 /* ViewController.m in Sources */,
+				F74D756B1AF90C5B002F23B0 /* SpotifyLoginViewController.m in Sources */,
+				F74D75681AF90828002F23B0 /* LastfmLoginViewController.m in Sources */,
 				F74D75451AF90700002F23B0 /* AppDelegate.m in Sources */,
 				F74D75421AF90700002F23B0 /* main.m in Sources */,
 			);
@@ -349,8 +373,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/ezefranca/Downloads/ios-sdk-master",
+				);
 				INFOPLIST_FILE = lastfy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -359,8 +388,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/ezefranca/Downloads/ios-sdk-master",
+				);
 				INFOPLIST_FILE = lastfy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
